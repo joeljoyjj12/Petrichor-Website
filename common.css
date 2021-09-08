@@ -2,16 +2,35 @@
  *{
     box-sizing: border-box; 
     margin:0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+ }
+
+ body *{
+     overflow: hidden;
+ }
+
+ .technical-main{
+    max-width: 100vw;
+    height:100vh;
+    position: relative;
+
+    background: rgb(0,58,171);
+    background: linear-gradient(5deg, #710519 0%, rgb(0, 0, 0) 84%);
+
+ }
+ .technical-main .heading p{
+    font-family: Target-Laser;
+    font-size: 3rem;
+    letter-spacing: 3px;
+
+    background-image: linear-gradient(66deg,#b4b4b6, #fffeef, #e47997);
+    background-size: 100%;
+    
  }
 
 .cultural-main{
     height:100vh;
-    width:100vw;
-    overflow: hidden;
-
-    overflow: auto;
+    max-width:100vw;
+    position: relative;
 
     background: rgb(0,58,171);
     background: linear-gradient(5deg, rgba(0,58,171,1) 0%, rgba(123,23,41,1) 84%);
@@ -25,11 +44,17 @@
 .heading p{
     position: absolute;
     font-size: 3.8em;
-    left:7%;
+    left:6%;
     top:16%;
     font-family: osaka;
     line-height: 60px;
-    color: rgb(218, 202, 203);
+
+    background-image: linear-gradient(46deg,#c0c0f6, #d0ceb4, #91d9e9);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 .logo_petr{
@@ -38,8 +63,8 @@
     top:0px;
 }
 .logo_petr img{
-    width:5.3vw;
-    min-width: 58px;
+    width:4.5vw;
+    min-width: 44px;
     height:auto;
 }
 
@@ -83,6 +108,13 @@
     justify-content: center;
 }
 
+.technical-main .event-btn-div{
+    right: 12vw;
+    left: unset;
+}
+
+
+
 a.event-btn{
     font-size: 25px;
     text-align: center;
@@ -98,10 +130,28 @@ a.event-btn{
 
 }
 
+.technical-main a.event-btn{
+    color:white;
+    border-radius:10px ;
+    border-color: white;
+    transition: border-color 0.5s, border-width 0.5s, color 0.5s;
+}
+
+.technical-main a.event-btn:hover{
+    color:rgb(243, 135, 135);
+    border-radius:10px ;
+    border-width: 2.5px;
+    border-color: rgb(204, 126, 126);
+    background-color: rgba(0, 0, 0,0.1);
+}
 
 @media screen and (max-width:360px){
     .heading p{
         font-size: 16vw;
+        line-height: 15vw;
+    }
+    .technical-main .heading p{
+        font-size: 15vw;
         line-height: 15vw;
     }
 }
